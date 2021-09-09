@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const pelicula = {
+            nombre: "davinci",
+            id: 01,
+            reproducir(){
+                return `reproducir pelicula... ${this.nombre}`;
+            }
+        }
+
+        console.log(pelicula.reproducir());
+
+        class Pelicula{
+            constructor (nombre, id){
+                this.nombre = nombre;
+                this.id = id;
+            }
+
+            reproducir(){
+                return `reproducir pelicula... ${this.nombre}`;
+            }
+        }
+
+        class Serie extends Pelicula{
+            reproducirCap(){
+                return `reproducir serie... ${this.nombre}`;
+            }
+        }
+
+        const peliuno = new Pelicula("V de Vendetta", 2);
+        const serieuno = new Serie("nagatoro", 3);
+
+        console.log(peliuno.reproducir());
+        console.log(serieuno.reproducirCap());
+
+    </script>
+    
+</body>
+</html>

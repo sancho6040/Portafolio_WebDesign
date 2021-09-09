@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limitacion de caracteres</title>
+    <style type = "text/css">
+        body{
+            font-family: Arial, Helvetica;
+        }
+    </style>
+    <script type = "text/javascript">
+        function limitar(elEvento, max) {
+            var elemento = document.getElementById("texto");
+            var evento = elEvento || window.event;
+            var codigoCaracter = evento.charCode || evento.keyCode;
+            
+            if(codigoCaracter == 37 || codigoCaracter == 39){
+                return true;
+            }
+            if(codigoCaracter == 8 || codigoCaracter == 46){
+                return true;
+
+            }else if(elemento.value.length >= max){
+                return false;
+
+            }else{
+                return true;
+            }
+        }
+
+        function reFresh(max){
+            var elemento = document.getElementById("texto");
+            var info = document.getElementById("info");
+
+            if(elemento.value.length >= max){
+                info.innerHTML = "caracteres restantes = "+ (max-elemento.value.length);
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div id="info">max 100 caracteres</div>
+    <textarea id = "texto" onkeypress="return limitar(event, 100);" onkeyup="return reFresh(100);" rows = "6" cols="30"></textarea>
+</body>
+</html>

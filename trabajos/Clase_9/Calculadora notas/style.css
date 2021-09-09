@@ -1,0 +1,83 @@
+html {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: #a8dadc;
+}
+
+.container {
+    max-width: 450px;
+    height: auto;
+    background-color: #f1faee;
+    margin: 5% auto;
+    padding-bottom: 1rem;
+}
+
+.form_top {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0 1rem;
+    border-top: solid .5rem #1d3557;
+    margin-bottom: 1rem;
+}
+
+.form_top h2 {
+    font-weight: bold;
+    color: #457b9d;
+    font-size: 18px;
+}
+
+h2 span {
+    color: #e63946;
+}
+
+.form_reg {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn_form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.input, .calcular{
+    background-color: #d2fafc;
+    padding: .5rem;
+    margin: .3rem 0;
+    border: none;
+    border-bottom: solid #a5e7e9 .2rem;
+    transition: all .5s;
+}
+
+output{
+    text-align: center;
+    background-color: #a8dadc;
+    padding: .5rem;
+    margin: .5rem 0;
+    border: none;
+    border-bottom: solid #a5e7e9 .2rem;
+    transition: all .5s;
+
+}
+
+.input:focus {
+    border-bottom: solid #e63946 .2rem;
+}
+
+.calcular{
+    width: 40%;
+    border-bottom: none;
+    background-color: #e63946;
+    color: white
+}
+
+.calcular:hover{
+    background-color: #d12f3c;
+}
+
+
